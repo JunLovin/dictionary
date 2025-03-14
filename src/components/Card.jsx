@@ -13,14 +13,14 @@ function Card({ id, audio, wordInfo, description }) {
 
     return (
         <>
-        <div className="card w-full my-2 mt-8 flex flex-col gap-2 p-4 py-6 bg-neutral-100 cursor-pointer rounded-[10px] hover:scale-102 transition-transform dark:text-white dark:bg-neutral-900" onClick={handleWord}>
+        <div className="card w-full my-2 mt-8 flex flex-col gap-2 p-4 py-6 bg-neutral-100 cursor-pointer rounded-[10px] hover:scale-102 transition-all dark:text-white dark:bg-neutral-900 duration-300" onClick={handleWord}>
             <div className="flex justify-between card-top">
                 <div className="card-top-left">
                 <h2 className="text-3xl font-extrabold">{id}</h2>
                 </div>
                 <div className="card-top-right">
                         <button 
-                            className="p-4 text-purple-300 bg-purple-500 rounded-full transition-colors cursor-pointer hover:bg-purple-200 hover:text-purple-500 dark:bg-purple-900"
+                            className="p-4 text-purple-500 bg-purple-100 rounded-full transition-colors cursor-pointer dark:text-purple-300 hover:bg-purple-200 dark:bg-purple-900 dark:hover:text-purple-700"
                             onClick={(e) => {
                                 e.stopPropagation()
                                 if (audio) {
