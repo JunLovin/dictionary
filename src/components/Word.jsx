@@ -19,7 +19,7 @@ function Word() {
                     <div className="word-top-right">
                         {word.phonetics && word.phonetics.some(phonetic => phonetic.audio) && (
                             <button
-                                className="p-4 text-yellow-600 bg-yellow-100 rounded-full transition-colors cursor-pointer dark:text-purple-300 hover:bg-yellow-200 dark:bg-purple-900 dark:hover:text-purple-700"
+                                className="p-4 text-yellow-600 bg-yellow-100 rounded-full transition-colors cursor-pointer dark:text-purple-300 hover:bg-yellow-200 dark:bg-purple-900 dark:hover:text-purple-700 dark:hover:bg-purple-200"
                                 onClick={() => {
                                     const audio = word.phonetics.find(p => p.audio)?.audio
                                     if (audio) {
