@@ -10,6 +10,6 @@
 
 @layer components {
   li {
-    @apply dark:marker:text-purple-500 transition-colors duration-300
+    @apply dark:marker:text-purple-500 transition-colors duration-300 marker:text-yellow-400
   }
 }
