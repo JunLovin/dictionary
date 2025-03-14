@@ -20,7 +20,7 @@ function Card({ id, audio, wordInfo, description }) {
                 </div>
                 <div className="card-top-right">
                         <button 
-                            className="p-4 text-purple-500 bg-purple-100 rounded-full transition-colors cursor-pointer dark:text-purple-300 hover:bg-purple-200 dark:bg-purple-900 dark:hover:text-purple-700"
+                            className="p-4 text-yellow-600 bg-yellow-100 rounded-full transition-colors cursor-pointer dark:text-purple-300 hover:bg-yellow-200 dark:bg-purple-900 dark:hover:text-purple-700"
                             onClick={(e) => {
                                 e.stopPropagation()
                                 if (audio) {
