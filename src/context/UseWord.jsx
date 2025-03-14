@@ -7,10 +7,23 @@ function UseWord({ children }) {
     const [data, setData] = useState(null)
 
     const handleApi = word => {
-        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-        .then(res => res.json())
-        .then(data => setData(data))
-        .catch(err => console.error(err))
+        setData(null)
+        return fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
+        .then(res => {
+            if (!res.ok) {
+                return { error: true }
+            }
+            return res.json()
+        })
+        .then(data => {
+            setData(data)
+            return data
+        })
+        .catch(err => {
+            console.error('Error fetching word:', err)
+            setData({ error: true })
+            return { error: true }
+        })
     }
 
     return (
