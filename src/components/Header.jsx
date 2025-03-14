@@ -67,7 +67,8 @@ function Header() {
                     </div>
                     <div className="separator w-[4px] h-[50%] bg-neutral-300 dark:bg-neutral-900 transition-colors duration-300"></div>
                     <div className="flex gap-2 justify-around items-center h-full color-theme">
-                        <div className="relative w-[50px] h-[24px] bg-neutral-300 rounded-full cursor-pointer transition-colors duration-300 ease-in-out" onClick={toggleTheme} style={{ backgroundColor: darkMode ? '#2f334c' : '#ccc' }}>
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="26"  height="26" className="text-neutral-400" style={{ color: darkMode ? '#AD46FF' : '#ccc' }}  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+                        <div className="relative w-[50px] h-[24px] bg-neutral-300 rounded-full cursor-pointer transition-colors duration-300 ease-in-out" onClick={toggleTheme} style={{ backgroundColor: darkMode ? '#2f334c' : '#87CEEB' }}>
                         {darkMode && (
                                 <>
                                     <svg className="absolute top-1 left-2 w-2 h-2 text-yellow-200" viewBox="0 0 24 24" fill="currentColor">
@@ -81,16 +82,25 @@ function Header() {
                                     </svg>
                                 </>
                             )}
-                            <div className="absolute top-[2px] w-[20px] h-[20px] bg-white rounded-full shadow-md transition-transform duration-300 ease-in-out" style={{ transform: darkMode ? 'translateX(28px)' : 'translateX(2px)' }}></div>
+                            {!darkMode && (
+                                <>
+                                <svg  xmlns="http://www.w3.org/2000/svg" className="absolute top-0 right-1 text-white"  width="12"  height="12"  viewBox="0 0 24 24"  fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.04 4.305c2.195 -.667 4.615 -.224 6.36 1.176c1.386 1.108 2.188 2.686 2.252 4.34l.003 .212l.091 .003c2.3 .107 4.143 1.961 4.25 4.27l.004 .211c0 2.407 -1.885 4.372 -4.255 4.482l-.21 .005h-11.878l-.222 -.008c-2.94 -.11 -5.317 -2.399 -5.43 -5.263l-.005 -.216c0 -2.747 2.08 -5.01 4.784 -5.417l.114 -.016l.07 -.181c.663 -1.62 2.056 -2.906 3.829 -3.518l.244 -.08z" /></svg>
+                                <svg  xmlns="http://www.w3.org/2000/svg" className="absolute top-1 left-3 text-white"  width="14"  height="14"  viewBox="0 0 24 24"  fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.04 4.305c2.195 -.667 4.615 -.224 6.36 1.176c1.386 1.108 2.188 2.686 2.252 4.34l.003 .212l.091 .003c2.3 .107 4.143 1.961 4.25 4.27l.004 .211c0 2.407 -1.885 4.372 -4.255 4.482l-.21 .005h-11.878l-.222 -.008c-2.94 -.11 -5.317 -2.399 -5.43 -5.263l-.005 -.216c0 -2.747 2.08 -5.01 4.784 -5.417l.114 -.016l.07 -.181c.663 -1.62 2.056 -2.906 3.829 -3.518l.244 -.08z" /></svg>
+                                <svg  xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 right-3 text-white"  width="13"  height="13"  viewBox="0 0 24 24"  fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.04 4.305c2.195 -.667 4.615 -.224 6.36 1.176c1.386 1.108 2.188 2.686 2.252 4.34l.003 .212l.091 .003c2.3 .107 4.143 1.961 4.25 4.27l.004 .211c0 2.407 -1.885 4.372 -4.255 4.482l-.21 .005h-11.878l-.222 -.008c-2.94 -.11 -5.317 -2.399 -5.43 -5.263l-.005 -.216c0 -2.747 2.08 -5.01 4.784 -5.417l.114 -.016l.07 -.181c.663 -1.62 2.056 -2.906 3.829 -3.518l.244 -.08z" /></svg>
+                                </>
+                            )
+
+                            }
+                            <div className="absolute top-[2px] w-[20px] h-[20px] rounded-full shadow-md transition-transform duration-300 ease-in-out" style={{
+                                transform: darkMode ? 'translateX(28px)' : 'translateX(2px)',
+                                backgroundColor: darkMode ? '#F6F1D5' : '#ffdd40'
+                            }}
+                                ></div>
                         </div>
-                        {darkMode ? (
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24" className="text-neutral-400 dark:text-purple-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
-                        ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="text-neutral-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="text-neutral-400" style={{ color: darkMode ? '#AD46FF' : '#ccc' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
                             </svg>
-                        )}
                     </div>
                 </div>
             </header>
