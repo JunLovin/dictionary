@@ -100,7 +100,7 @@ La aplicación estará disponible en `https://localhost:5173`
 4. Haz push a la rama ( git push origin feature/amazing-feature )
 5. Abre un Pull Request
 
-## 📞 Contacto\
+## 📞 Contacto
 
 Mathias Said - @JunLovin - mathiassaid7@gmail.com
 
