@@ -19,7 +19,7 @@ function Word() {
                     <div className="word-top-right">
                         {word.phonetics && word.phonetics.some(phonetic => phonetic.audio) && (
                             <button
-                                className="p-4 bg-purple-100 rounded-full transition-colors cursor-pointer hover:bg-purple-200 dark:bg-purple-900"
+                                className="p-4 text-purple-500 bg-purple-100 rounded-full transition-colors cursor-pointer dark:text-purple-300 hover:bg-purple-200 dark:bg-purple-900 dark:hover:text-purple-700"
                                 onClick={() => {
                                     const audio = word.phonetics.find(p => p.audio)?.audio
                                     if (audio) {
@@ -27,7 +27,7 @@ function Word() {
                                     }
                                 }}
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500 dark:text-purple-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="">
                                     <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                                     <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
                                     <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
