@@ -26,5 +26,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname,  'src/context')
       }
     ]
+  },
+  server: {
+    allowedHosts: [
+      ''
+    ],
   }
 })
