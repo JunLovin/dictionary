@@ -65,7 +65,7 @@ function Header() {
                             <option value="inter" className="font-inter">Inter</option>
                         </select>
                     </div>
-                    <div className="separator w-[4px] h-[50%] bg-neutral-300 dark:bg-neutral-900 transition-colors duration-300"></div>
+                    <div className="separator w-[4px] h-[50%] bg-yellow-400/20 dark:bg-purple-500/20 transition-colors duration-300"></div>
                     <div className="flex gap-2 justify-around items-center h-full color-theme">
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="26"  height="26" className="text-yellow-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
                         <div className="relative w-[50px] h-[24px] rounded-full cursor-pointer transition-all duration-300 ease-in-out" onClick={toggleTheme} style={{ backgroundColor: darkMode ? '#2f334c' : '#87CEEB' }}>
