@@ -4,13 +4,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import './index.css'
 import routes from './routes'
 import UseFont from '@context/UseFont'
+import UseWord from '@context/UseWord'
 
 const router = createBrowserRouter(routes)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <UseFont>
-    <RouterProvider router={router}/>
-    </UseFont>
+      <UseWord>
+        <UseFont>
+          <RouterProvider router={router}/>
+        </UseFont>
+      </UseWord>
   </StrictMode>,
 )

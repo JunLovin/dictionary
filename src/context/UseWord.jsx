@@ -1,9 +1,9 @@
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useState } from 'react'
 
 export const UseWordContext = createContext()
 
 function UseWord({ children }) {
-    const [word, setWord] = useState('')
+    const [word, setWord] = useState(null)
     const [data, setData] = useState(null)
 
     const handleApi = word => {
@@ -13,13 +13,9 @@ function UseWord({ children }) {
         .catch(err => console.error(err))
     }
 
-    useEffect(() => {
-        handleApi(word)
-    })
-
     return (
         <>
-        <UseWordContext.Provider value={{ word, setWord, data }}>
+        <UseWordContext.Provider value={{ word, setWord, data, handleApi }}>
             {children}
         </UseWordContext.Provider>
         </>
