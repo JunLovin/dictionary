@@ -61,7 +61,7 @@ function Word() {
                                         <p className="pl-4 mt-1 text-neutral-400 dark:text-neutral-300">{element.example && `"${element.example}"`}</p>
                                     </>
                                 )
-                            }) : <p className="pl-4 text-black">Nothing here!</p>}
+                            }) : <p className="pl-4 text-black dark:text-white">Nothing here!</p>}
                         </ul>
                     </div>
                     <hr className="text-yellow-300 dark:text-purple-500/70" />
