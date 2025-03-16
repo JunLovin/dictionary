@@ -58,7 +58,7 @@ function Word() {
                                 return (
                                     <>
                                         <li className="pl-4 leading-normal text-black dark:text-white">{element.definition}</li>
-                                        <p className="pl-4 mt-1 text-neutral-400 dark:text-neutral-300">{element.example && `"${element.example}"`}</p>
+                                        <p className="pl-4 mt-1 text-neutral-400 dark:text-neutral-500">{element.example && `"${element.example}"`}</p>
                                     </>
                                 )
                             }) : <p className="pl-4 text-black dark:text-white">Nothing here!</p>}
