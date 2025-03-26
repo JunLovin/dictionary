@@ -13,7 +13,7 @@ function Card({ id, audio, wordInfo, description }) {
 
     return (
         <>
-        <div className="card w-full my-2 mt-8 flex flex-col gap-2 p-4 py-6 bg-neutral-100 cursor-pointer rounded-[10px] hover:scale-102 transition-all dark:text-white dark:bg-neutral-900 duration-300" onClick={handleWord}>
+        <div className="card w-full my-2 mt-8 flex flex-col gap-2 p-4 py-6 bg-neutral-100 cursor-pointer rounded-[10px] hover:scale-102 active:scale-100 transition-all dark:text-white dark:bg-neutral-900 duration-300" onClick={handleWord}>
             <div className="flex justify-between card-top">
                 <div className="card-top-left">
                 <h2 className="text-3xl font-extrabold">{id}</h2>
